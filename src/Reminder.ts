@@ -67,6 +67,10 @@ export default class Reminder {
    * Toggles reminder completion status true ⬅ ➡ false.
    */
   public toggleCompletion(): void {
-    throw new Error('Not yet implemented');
+    if(this._isCompleted === true) {
+      this._isCompleted = false;
+    } else {
+    this._isCompleted = true;
+    }
   }
 }
