@@ -75,6 +75,7 @@ export default class RemindersHandler {
      * @param tag - The keyword used to help categorize reminder
      */
     public modifyReminder(index: number, description: string): void {
+        if(this.isIndexValid(index))
         this._reminders[index - 1 ].description = description;
     }
 
@@ -84,6 +85,7 @@ export default class RemindersHandler {
      * @param index - The index of the reminder
      */
     public toggleCompletion(index: number): void {
+        if(this.isIndexValid(index))
         this._reminders[index - 1].toggleCompletion();
     }
     /**
